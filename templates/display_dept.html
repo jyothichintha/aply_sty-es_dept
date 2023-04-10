@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheets" href="{% static 'css/c1.css' %}">
+    <style>
+        body{
+            background-color: aqua;
+        }
+        tr{
+            font-style: italic;
+            background-color: aliceblue;
+        }
+        td{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DEPT</h1>
+        <table border="1px" cellspacing="0px" cellpadding="10px" >
+            <tr>
+                <th>deptno</th>
+                <th>dname</th>
+                <th>loc</th>
+            </tr>
+        {% for i in loe %}
+        <tr>
+            <td>{{i.deptno}}</td>
+            <td>{{i.dname}}</td>
+            <td>{{i.loc}}</td>
+        </tr>
+        {% endfor %}
+
+        </table>
+    
+    </center>
+    
+</body>
+</html>
